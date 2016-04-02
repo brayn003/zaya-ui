@@ -1,0 +1,1 @@
+angular.module('zaya', ['ui.bootstrap']);
