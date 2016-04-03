@@ -1,0 +1,91 @@
+html,body{
+	height: 100%;
+}
+
+body{
+
+}
+
+*{
+	border-radius: 0px !important;
+}
+
+.navbar{
+	margin-bottom: 0px;
+}
+
+.no-padding{
+	padding: 0px;
+}
+
+.full-width{
+	height: 100%;
+}
+
+.well-container{
+}
+
+.topic-container{
+	padding: 10px 15px;
+}
+
+.topic-input{
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 10px;
+}
+
+.topic-input label{
+	margin-left: 3%;
+	width: 6%; 
+	display: inline-block;
+	float: left;
+	line-height: 34px;
+}
+
+.topic-input .topic-input-container{
+	margin-right: 3%;
+	width: 88%;
+	display: inline-block;
+	float: left;
+}
+
+.topic-container .topic-title{
+	border-bottom: 1px #DDD solid;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 0px 10px;
+}
+
+.topic-title p{
+	margin: 7px 0px;
+	padding: 0px 3%;
+}
+
+.topic-container .topic-dragbox{
+	margin: 10px -5px;
+	border: 3px rgba(200,200,2200,0.8) dashed;
+	height: 100px;
+	line-height: 100px;
+	color: rgba(200,200,2200,0.8);
+	text-align: center;
+	font-weight: 600;
+}
+
+
+.row-container{
+	margin: 10px 15px;
+}
+
+.underlined-dark{
+	border-bottom: 1px rgba(200,200,200,0.9) solid;
+}
+
+.underlined-dark{
+	border-bottom: 1px rgba(200,200,200,0.5) solid;
+}
+
+.featurette{
+	margin: 0px -15px;
+}
+

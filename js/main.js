@@ -4,21 +4,21 @@ app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/create")
 
 	$stateProvider
-	.state('home', {
-		url: "/",
-		templateUrl: "index.html"
-	})
+	// .state('home', {
+	// 	url: "/",
+	// 	templateUrl: "home.html"
+	// })
 	.state('create', {
 		url: "/create",
         views: {
             "view-c-container": {
 				templateUrl: "create.html",
             },
-            "view-c-lesson": {
+            "view-c-lesson@create": {
 				templateUrl: "create.lesson.html",
             },
-            "view-c-topic": {
-				templateUrl: "create.topic.html",
+            "view-c-course@create": {
+				templateUrl: "create.course.html",
             }
         }
 	})
