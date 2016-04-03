@@ -16,6 +16,7 @@ app.config(function($stateProvider, $urlRouterProvider){
             },
             "view-c-lesson@create": {
 				templateUrl: "create.lesson.html",
+				controller: "ControllerCLesson"
             },
             "view-c-course@create": {
 				templateUrl: "create.course.html",
@@ -40,6 +41,17 @@ app.config(function($stateProvider, $urlRouterProvider){
 	})
 })
 app.controller('HomeController', function ($scope) {
-  $scope.name = 'Superman';
-  $scope.isCollapsed = true;
+	$scope.name = 'Superman';
+	$scope.isCollapsed = true;
+}).controller('ControllerCLesson', function ($scope, $http){
+	$scope.hello = "boobs";
+	$http({
+        method : "POST",
+        url : "data/lessons.json"
+    }).then(function mySucces(response) {
+    	// alert(JSON.stringify(response));
+        $scope.lessons = response.data;
+    }, function myError(response) {
+        alert("Can't do it");
+    });
 });

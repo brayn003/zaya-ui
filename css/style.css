@@ -81,11 +81,79 @@ body{
 	border-bottom: 1px rgba(200,200,200,0.9) solid;
 }
 
-.underlined-dark{
+.underlined-light{
 	border-bottom: 1px rgba(200,200,200,0.5) solid;
 }
 
 .featurette{
 	margin: 0px -15px;
+	padding: 10px 0px;
 }
 
+.featurette .featurette-bottom{
+	position: absolute;
+	bottom: 0px;
+	margin: 0px -15px;
+	padding: 0px 15px;
+	width: 100% 
+}
+
+.navbar-blue{
+	background: #0096EA;
+	border: none;
+}
+
+.navbar-blue .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+.navbar-blue .navbar-toggle {
+    border-color: #FFF;
+}
+
+.navbar-blue .navbar-nav>.active>a, .navbar-blue .navbar-nav>.active>a:focus, .navbar-blue .navbar-nav>.active>a:hover {
+    border-bottom: 5px #FFF solid;
+    font-weight: 600;
+}
+
+.navbar-blue .navbar-nav>li>a {
+	color: #FFF
+}
+
+.navbar-blue .navbar-brand {
+    color: #FFF;
+}
+
+.navbar-img-brand{
+	margin-top: 2px;
+	max-height: 50px;
+	margin-right: 50px;
+}
+
+.navbar-img-brand img{
+	max-height: 50px;
+}
+
+.navbar-blue .nav>li>a:focus, .navbar-blue .nav>li>a:hover {
+	background: initial;
+    text-decoration: none;
+    border-bottom: 5px #004a72 solid;
+    color: #004a72;
+}
+
+.navbar-blue .open>a, .navbar-blue .open>a:focus, .navbar-blue .open>a:hover{
+	background: initial;
+    text-decoration: none;
+    border-bottom: 5px #004a72 solid;
+    color: #004a72;
+}
+
+
+
+.featurette-thumbnail{
+	height: 150px;
+	overflow: hidden;
+}
+.featurette-thumbnail img{
+	width: inherit;
+}

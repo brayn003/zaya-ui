@@ -19,10 +19,33 @@
 			</div>
 		</form>
 	</div>
-	<div class="row-container underlined-light">
-		<div class="featurette clearfix">
-			<div class="col-sm-4">
-				<img class="img-responsive" src="assets/img/topic1.jpg">
+	<div>
+		<div ng-repeat="lesson in lessons" class="row-container underlined-light">
+			<!-- {{lesson| json}} -->
+			<div class="featurette clearfix">
+				<div class="col-sm-4">
+					<div class="featurette-thumbnail">
+						<img class="img-responsive" src="assets/img/lessons/topic{{lesson.id}}.jpg">
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div style="height: 150px;">
+						<h4 style="margin-top:0px;"><b>{{lesson.title}}</b></h4>
+						<p><span>{{lesson.subject}} </span><span>Grade {{lesson.grade}}</span></p>
+						<div class="clearfix featurette-bottom">
+							<div class="pull-left">
+								<span>
+									{{lesson.noOfVideos}} <span class="glyphicon glyphicon-facetime-video"></span>&nbsp;
+									{{lesson.noOfDocuments}} <span class="glyphicon glyphicon-file"></span>&nbsp;
+									{{lesson.noOfQuestions}} <b>Q</b>
+								</span>
+							</div>
+							<div class="pull-right">
+								<i>{{lesson.date}}</i>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
