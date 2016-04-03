@@ -1,0 +1,21 @@
+{
+  "name": "zaya-ui",
+  "homepage": "https://github.com/brayn003/zaya-ui",
+  "authors": [
+    "brayn003 <rudraprasaddas@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-bootstrap": "^1.2.5",
+    "bootstrap-css": "^3.3.6",
+    "angular-ui-router": "^0.2.18",
+    "angular-touch": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "ngScrollbar": "ngscrollbar#^0.0.1",
+    "angular-drag-and-drop-lists": "^1.4.0"
+  }
+}

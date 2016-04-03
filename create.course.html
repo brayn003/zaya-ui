@@ -1,0 +1,40 @@
+<div class="row ">
+	<div style="margin-bottom: 0px;padding: 0px;border: none;" class="well ">
+		<nav class="navbar navbar-inverse">
+			<p class="navbar-text">New Course - Algebra</p>
+			<button style="margin-left:15px;margin-right: 15px;" type="button" class="btn btn-default navbar-btn navbar-right">Cancel</button>
+		</nav>
+		<div class="well-container">
+			<!-- {{courses|json}} -->
+			<ul style="padding: 0px;margin: 0px;">
+				<li ng-repeat="course in courses" class="topic-container underlined-light" ng-repeat="(key,course) in courses">
+					<div class="topic-input clearfix">
+						<label class=" control-label" >{{course.id}}</label>
+						<div class="topic-input-container" style="">
+							<input type="text" class="form-control" placeholder="Course Name" ng-model="course.name">
+						</div>
+					</div>
+					<ul>
+						<li ng-repeat="(lkey,lesson) in course.lessons" class="topic-title clearfix">
+							{{lesson.title}} <span style="cursor: pointer;" ng-click="course.lessons.splice(lkey,1)"><span class="glyphicon glyphicon glyphicon-remove-sign pull-right"></span></span>
+						</li>
+					</ul>
+					<div class="topic-dragbox-container">	
+						<ul dnd-list = "course.lessons">
+							<li ng-class="{true: 'topic-dragbox-big'}[course.lessons.length == 0]" class="topic-dragbox">
+								Drag to add more lessons
+							</li>
+						</ul>
+					</div>
+				</li>
+
+			</ul>
+			<div class="topic-footer">
+				<p ng-click="addCourse()"><span class="glyphicon glyphicon-plus-sign"></span> Add topic</p>
+				<div class="clearfix">
+					<button class="btn btn-primary btn-lg pull-right">Create</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

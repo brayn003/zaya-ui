@@ -1,0 +1,208 @@
+html,body{
+	height: 100%;
+}
+
+body{
+
+}
+
+*{
+	border-radius: 0px !important;
+}
+
+.navbar{
+	margin-bottom: 0px;
+}
+
+.no-padding{
+	padding: 0px;
+}
+
+.full-width{
+	height: 100%;
+}
+
+.well-container>ul{
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.well-container>ul>li{
+	display: block;
+	padding: 10px 15px;
+}
+
+.topic-input{
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 10px;
+}
+
+.topic-input label{
+	margin-left: 3%;
+	width: 6%; 
+	display: inline-block;
+	float: left;
+	line-height: 34px;
+}
+
+.topic-input .topic-input-container{
+	margin-right: 3%;
+	width: 88%;
+	display: inline-block;
+	float: left;
+}
+
+.topic-container .topic-title{
+}
+
+.topic-title p{
+}
+
+.topic-container .topic-dragbox{
+	margin: 10px -5px;
+	border: 3px rgba(200,200,2200,0.8) dashed;
+	height: 100px;
+	line-height: 100px;
+	color: rgba(200,200,2200,0.8);
+	text-align: center;
+	font-weight: 600;
+}
+.topic-container .topic-dragbox-big{
+	margin: 10px -5px;
+	border: 3px rgba(200,200,2200,0.8) dashed;
+	height: 200px;
+	line-height: 200px;
+	color: rgba(200,200,2200,0.8);
+	text-align: center;
+	font-weight: 600;
+}
+
+
+.row-container{
+	margin: 10px 15px;
+}
+
+.underlined-dark{
+	border-bottom: 1px rgba(200,200,200,0.9) solid;
+}
+
+.underlined-light{
+	border-bottom: 1px rgba(200,200,200,0.5) solid;
+}
+
+.featurette{
+	margin: 0px -15px;
+	padding: 10px 0px;
+}
+
+.featurette .featurette-bottom{
+	position: absolute;
+	bottom: 0px;
+	margin: 0px -15px;
+	padding: 0px 15px;
+	width: 100% 
+}
+
+.navbar-blue{
+	background: #0096EA;
+	border: none;
+}
+
+.navbar-blue .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+.navbar-blue .navbar-toggle {
+    border-color: #FFF;
+}
+
+.navbar-blue .navbar-nav>.active>a, .navbar-blue .navbar-nav>.active>a:focus, .navbar-blue .navbar-nav>.active>a:hover {
+    border-bottom: 5px #FFF solid;
+    font-weight: 600;
+}
+
+.navbar-blue .navbar-nav>li>a {
+	color: #FFF
+}
+
+.navbar-blue .navbar-brand {
+    color: #FFF;
+}
+
+.navbar-img-brand{
+	margin-top: 2px;
+	max-height: 50px;
+	margin-right: 50px;
+}
+
+.navbar-img-brand img{
+	max-height: 50px;
+}
+
+.navbar-blue .nav>li>a:focus, .navbar-blue .nav>li>a:hover {
+	background: initial;
+    text-decoration: none;
+    border-bottom: 5px #004a72 solid;
+    color: #004a72;
+}
+
+.navbar-blue .open>a, .navbar-blue .open>a:focus, .navbar-blue .open>a:hover{
+	background: initial;
+    text-decoration: none;
+    border-bottom: 5px #004a72 solid;
+    color: #004a72;
+}
+
+
+
+.featurette-thumbnail{
+	height: 150px;
+	overflow: hidden;
+}
+.featurette-thumbnail img{
+	width: inherit;
+}
+
+
+.lesson-container ul[dnd-list],
+.lesson-container ul[dnd-list] > li {
+	position: relative;
+}
+
+.lesson-container ul[dnd-list] li.selected {
+    background-color: #EEE;
+    color: #000;
+}
+
+.topic-container ul{
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+
+.topic-container ul>li{
+	border-bottom: 1px #DDD solid;
+	padding: 10px;
+	display: block;
+}
+
+
+
+.topic-container .topic-dragbox-container .dndDragover .topic-dragbox{
+    background: #747474;
+}
+
+.topic-container .topic-dragbox-container .dndPlaceholder {
+    display: none;
+}
+
+.topic-footer{
+	padding: 10px 15px;
+}
+
+.topic-footer p{
+	font-size: 18px;
+	cursor: pointer;
+}
