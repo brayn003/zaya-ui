@@ -206,3 +206,38 @@ body{
 	font-size: 18px;
 	cursor: pointer;
 }
+
+.ui-select-multiple.ui-select-bootstrap{
+	padding: 6px 12px 0px;
+}
+
+.ui-select-bootstrap .ui-select-choices-row.active>a{
+	color: #222;
+	background: transparent;
+}
+
+.show-label label{
+	 position: initial; 
+     width: initial; 
+     height: initial; 
+     padding: 0; 
+     margin: 0; 
+     overflow: initial; 
+     clip: initial; 
+     border: initial;
+     display: block;
+     font-size: 12px;
+
+}
+
+.ui-select-multiple.ui-select-bootstrap input.ui-select-search{
+	width: 100% !important;
+}
+
+.form-filter .form-group{
+	margin-top:17px;
+}
+
+.show-label{
+	margin-top: 0px !important;
+}
