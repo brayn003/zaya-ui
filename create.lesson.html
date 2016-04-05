@@ -2,26 +2,43 @@
 	<div class="row-container underlined-dark">
 		<!-- {{lessons|json}} -->
 		<p>Drag and drop lessons to create course</p>
-		<form style="margin-bottom: 10px;" class="form-inline clearfix">
-			<div class="form-group">
-				<label class="sr-only" for="lesson-topic">Email address</label>
-				<select class="form-control" id="lesson-topic">
-					<option>Select Topic</option>
-				</select>
+		<!-- {{lessons|json}} -->
+		<!-- {{filters|json}} -->
+		<!-- {{options|json}} -->
+		<!-- {{options.subjects|json}} -->
+		<!-- {{lessons.data[0].grade|json}} -->
+		<div style="margin-bottom: 10px;" class="row form-inline form-filter clearfix">
+			<div ng-class="{'show-label' : filters.subjects.length != 0}" class="form-group col-sm-3">
+				<label class="sr-only" for="lesson-subject">Subject</label>
+				<ui-select multiple theme="bootstrap" style="width: 100%;" close-on-select="false" title="Choose a Subject" id="lesson-subject" ng-model="filters.subjects">
+					<ui-select-match placeholder="All Subjects">{{$item}}</ui-select-match>
+					<ui-select-choices repeat="subject in options.subjects track by $id(subject)| filter:$select.search">
+				    	{{subject}}
+				    </ui-select-choices>
+					<!-- <option>Select Grade</option> -->
+				</ui-select>
 			</div>
-			<div class="form-group">
-				<label class="sr-only" for="lesson-grade">Password</label>
-				<select class="form-control" id="lesson-grade">
-					<option>Select Grade</option>
-				</select>
+			<div ng-class="{'show-label' : filters.grades.length != 0}" class="form-group col-sm-3">
+				<label class="sr-only" for="lesson-grade">Grade</label>
+				<ui-select multiple theme="bootstrap" style="width: 100%;" close-on-select="false" title="Choose a Grade" id="lesson-grade" ng-model="filters.grades">
+					<ui-select-match placeholder="All Grades">{{$item}}</ui-select-match>
+					<ui-select-choices repeat="grade in options.grades track by $id(grade)| filter:$select.search">
+				    	{{grade}}
+				    </ui-select-choices>
+					<!-- <option>Select Grade</option> -->
+				</ui-select>
 			</div>
-			<div class="form-group pull-right">
-				<span style="font-size:20px;line-height: 34px;" class="glyphicon glyphicon-search"></span>
+			<div class="form-group  col-sm-offset-2 col-sm-4">
+				<div class="input-group">
+				  <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon2" ng-model="filters.search" >
+				  <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search"></span></span>
+				</div>
 			</div>
-		</form>
+			
+		</div>
 	</div>
 	<ul style="padding: 0px;margin: 0px;">
-		<li style="display: block;" ng-repeat="lesson in lessons" class="row-container underlined-light" dnd-draggable="lesson" dnd-effect-allowed="move" dnd-selected="lessons.selected = lesson" ng-class="{'selected': lessons.selected === lesson}">
+		<li style="display: block;" ng-repeat="lesson in lessons.data | pick:gradeFilter | pick:subjectFilter | filterBy: ['title']: filters.search" class="row-container underlined-light" dnd-draggable="lesson" dnd-effect-allowed="move" dnd-selected="lessons.selected = lesson" ng-class="{'selected': lessons.selected === lesson}">
 			<!-- {{lesson| json}} -->
 			<div class="featurette clearfix">
 				<div class="col-sm-4">

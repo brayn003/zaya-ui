@@ -3,10 +3,11 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap-css/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="lib/ui-select/dist/select.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-	<nav style="position: fixed;width: 100%;" class="navbar navbar-blue" ng-controller="HomeController">
+	<nav style="position: fixed;width: 100%;z-index: 11" class="navbar navbar-blue" ng-controller="HomeController">
 		<div class="container">
 			<!-- Collapse Wrapper -->
 			<div class="navbar-header">
@@ -30,21 +31,27 @@
 					
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li uib-dropdown on-toggle="toggled(open)" class="dropdown">
-						<a href="#" class="dropdown-toggle" uib-dropdown-toggle>Dropdown <span class="caret"></span></a>
+					<li style="" uib-dropdown on-toggle="toggled(open)" class="dropdown">
+						<img class="img-responsive" style="display: inline-block;float: left;max-width: 55px;" src="assets/img/profile.jpg" />
+						
+						<a style="display: inline-block;float: left;" href="#" class="dropdown-toggle" uib-dropdown-toggle>
+							<!-- <div style="margin-top:-15px;margin-bottom:-15px;"> -->
+								
+							<!-- </div> -->
+						<span class="caret"></span></a>
 						<ul uib-dropdown-menu class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Notifications</a></li>
+							<li><a href="#">Settings</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
+							<li><a href="#">Logout</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div style="padding-top: 55px;" class="container-fluid full-width">
+	<div style="padding-top: 55px;z-index: 10" class="container-fluid full-width">
 		<div class="full-width" ui-view="view-c-container"></div>
 	</div>
 
@@ -53,7 +60,9 @@
 	<!-- <script type="text/javascript" src="lib/angular-touch/angular-touch.min.js"></script> -->
 	<script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>
 	<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="lib/angular-filter/dist/angular-filter.min.js"></script>
 	<script type="text/javascript" src="lib/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
+	<script type="text/javascript" src="lib/ui-select/dist/select.min.js"></script>
 	<!-- <script type="text/javascript" src="lib/ngScrollbar/ngscrollbar.js"></script> -->
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
